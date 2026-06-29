@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention · Series B · Part Six · Cultural Musings</title>
+<style>
+:root{
+  --bg:#0c0a08;
+  --bg-paper:#13100d;
+  --bg-card:#181410;
+  --ink:#ece3d4;
+  --ink-dim:#b8ad9a;
+  --ink-faint:#7d7263;
+  --accent:#c9933f;
+  --accent-soft:#8a6a3a;
+  --accent-deep:#5e3f1f;
+  --rule:#2c241c;
+  --sanskrit:#e0b873;
+  --serif:'Tinos','Georgia','Times New Roman',serif;
+  --display:'Spectral','Georgia',serif;
+  --max:780px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-deep);}
+a:hover{color:var(--sanskrit);border-bottom-color:var(--accent);}
+
+header.masthead{
+  text-align:center;padding:64px 24px 40px;border-bottom:1px solid var(--rule);
+  background:radial-gradient(ellipse at top, #1b150e 0%, var(--bg) 70%);
+}
+.brand{letter-spacing:.22em;font-size:13px;color:var(--ink-faint);text-transform:uppercase;}
+.platform-sub{font-size:13px;color:var(--ink-faint);margin-top:4px;}
+.series-tag{margin-top:28px;font-size:14px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;}
+.devanagari-strip{font-size:15px;color:var(--sanskrit);margin-top:10px;letter-spacing:.04em;}
+
+nav.toc{max-width:var(--max);margin:36px auto 0;padding:0 24px;text-align:center;font-size:14px;line-height:2.1;}
+nav.toc a{margin:0 10px;color:var(--ink-dim);border-bottom:1px dotted var(--accent-deep);}
+nav.toc a:hover{color:var(--sanskrit);}
+
+nav.allparts{
+  max-width:var(--max);margin:18px auto 0;padding:18px 24px 0;border-top:1px solid var(--rule);
+  text-align:center;font-size:13.5px;color:var(--ink-faint);line-height:1.9;
+}
+nav.allparts .current{color:var(--accent);font-weight:600;}
+nav.allparts a{color:var(--ink-dim);border-bottom:1px dotted var(--rule);}
+
+main{max-width:var(--max);margin:0 auto;padding:0 24px 80px;}
+
+.title-block{padding:56px 0 24px;text-align:center;}
+.title-block .kicker{font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;}
+.title-block h1{font-family:var(--display);font-size:42px;line-height:1.18;font-weight:600;margin:0 0 18px;color:#f4ead8;}
+.title-block h2.subtitle{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;color:var(--ink-dim);margin:0 0 30px;line-height:1.5;}
+.meta-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;font-size:14px;color:var(--ink-faint);margin-top:18px;}
+.meta-grid b{color:var(--ink-dim);font-weight:600;}
+
+.ornament{text-align:center;color:var(--accent-soft);font-size:20px;margin:40px 0;letter-spacing:.4em;}
+
+section.context-box, section.preview-box{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:32px 32px;margin:32px 0;
+}
+section.context-box h3, section.preview-box h3{font-family:var(--display);color:var(--sanskrit);font-size:20px;margin-top:0;}
+section.context-box h4, section.preview-box h4{font-size:16px;color:var(--ink-dim);margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em;}
+
+table.partmap{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+table.partmap th, table.partmap td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;}
+table.partmap th{background:#1d170f;color:var(--accent);font-weight:600;}
+table.partmap tr:nth-child(even) td{background:#15110c;}
+table.partmap td.this-paper{color:var(--sanskrit);font-weight:600;}
+
+blockquote.pull{
+  margin:40px 0;padding:24px 28px;border-left:3px solid var(--accent);
+  background:linear-gradient(90deg, #1a140c, transparent);font-style:italic;font-size:18.5px;color:#ddd0b8;
+}
+blockquote.pull .attrib{display:block;text-align:right;font-style:normal;font-size:13px;color:var(--accent);margin-top:12px;letter-spacing:.05em;text-transform:uppercase;}
+
+h1.sectionhead{
+  font-family:var(--display);font-size:14px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;
+  margin:64px 0 4px;border-top:1px solid var(--rule);padding-top:36px;
+}
+h1.sectionhead + h2.sectiontitle{margin-top:6px;}
+h2.sectiontitle{font-family:var(--display);font-size:30px;line-height:1.25;color:#f4ead8;margin:0 0 28px;font-weight:600;}
+h3{font-family:var(--display);font-size:21px;color:var(--sanskrit);margin:38px 0 14px;}
+p{margin:0 0 18px;color:var(--ink);}
+.dim{color:var(--ink-dim);}
+
+.sanskrit-block{
+  text-align:center;font-size:21px;color:var(--sanskrit);line-height:1.9;margin:30px 0;padding:18px 0;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.sanskrit-block .translit{display:block;font-size:15px;font-style:italic;color:var(--ink-dim);margin-top:10px;}
+.sanskrit-block .gloss{display:block;font-size:14.5px;color:var(--ink-faint);margin-top:8px;font-style:normal;}
+.cite-source{text-align:center;font-size:13px;color:var(--ink-faint);margin-top:-22px;margin-bottom:30px;letter-spacing:.04em;}
+
+.accent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:30px 0;}
+.accent-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px;}
+.accent-card .ac-sanskrit{font-family:var(--display);font-size:24px;color:var(--sanskrit);margin-bottom:4px;}
+.accent-card .ac-roman{font-size:13px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;}
+.accent-card .ac-label{font-weight:600;color:var(--ink);font-size:15px;margin-bottom:8px;}
+.accent-card p{font-size:14.5px;color:var(--ink-dim);margin-bottom:8px;}
+
+table.datatable{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px;}
+table.datatable th,table.datatable td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;}
+table.datatable th{background:#1d170f;color:var(--accent);}
+table.datatable tr:nth-child(even) td{background:#15110c;}
+table.datatable caption{text-align:left;font-size:14px;color:var(--ink-faint);margin-bottom:10px;font-style:italic;}
+
+.divider-orn{text-align:center;color:var(--accent-deep);font-size:20px;margin:46px 0;letter-spacing:.5em;}
+
+.formula-box{
+  background:#161108;border:1px solid var(--accent-deep);border-radius:4px;padding:26px 30px;margin:30px 0;
+  text-align:center;
+}
+.formula-box .formula-main{font-family:var(--display);font-size:20px;color:var(--sanskrit);letter-spacing:.02em;margin-bottom:10px;}
+.formula-box .formula-translit{font-size:14.5px;font-style:italic;color:var(--ink-dim);}
+.formula-box .formula-note{font-size:13.5px;color:var(--ink-faint);margin-top:14px;border-top:1px solid var(--rule);padding-top:14px;}
+
+.theory-compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:28px 0;}
+.theory-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px;}
+.theory-card .tc-name{font-family:var(--display);color:var(--sanskrit);font-size:17px;margin-bottom:4px;}
+.theory-card .tc-school{font-size:12px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;}
+.theory-card p{font-size:14px;color:var(--ink-dim);}
+
+/* Eight-limb ladder visual */
+.astanga-ladder{margin:30px 0;display:flex;flex-direction:column;gap:0;}
+.astanga-rung{display:flex;align-items:stretch;border:1px solid var(--rule);margin-bottom:-1px;}
+.astanga-rung:first-child{border-radius:4px 4px 0 0;}
+.astanga-rung:last-child{border-radius:0 0 4px 4px;}
+.astanga-rung .rung-num{
+  width:46px;min-width:46px;background:var(--accent-deep);display:flex;align-items:center;justify-content:center;
+  font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.05em;
+}
+.astanga-rung .rung-body{padding:14px 18px;flex:1;background:var(--bg-card);}
+.astanga-rung.highlight .rung-body{background:#1c160d;}
+.astanga-rung .rung-sanskrit{font-family:var(--display);font-size:20px;color:var(--sanskrit);}
+.astanga-rung .rung-roman{font-size:12px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;}
+.astanga-rung .rung-def{font-size:14px;color:var(--ink-dim);}
+.astanga-rung .rung-tag{font-size:12px;color:var(--accent);font-style:italic;margin-top:6px;}
+
+/* Vṛtti cards */
+.vrtti-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:28px 0;}
+.vrtti-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:16px 18px;}
+.vrtti-card .vc-sanskrit{font-family:var(--display);font-size:20px;color:var(--sanskrit);display:block;margin-bottom:3px;}
+.vrtti-card .vc-roman{font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:8px;}
+.vrtti-card .vc-def{font-size:14px;color:var(--ink-dim);}
+
+.reading-note{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px 24px;margin:24px 0;font-size:14.5px;color:var(--ink-dim);}
+.reading-note b{color:var(--ink);}
+
+.glossterm{font-family:var(--display);color:var(--sanskrit);font-size:17px;}
+dl.glossary dt{margin-top:22px;}
+dl.glossary dd{color:var(--ink-dim);font-size:14.5px;margin:6px 0 0;}
+
+.footnotes{font-size:14.5px;color:var(--ink-dim);}
+.footnotes li{margin-bottom:14px;}
+
+/* Samāpatti progression */
+.samapatti-track{margin:28px 0;}
+.samapatti-stage{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;}
+.samapatti-stage .ss-label{
+  min-width:130px;background:var(--bg-card);border:1px solid var(--rule);border-radius:3px;
+  padding:10px 12px;text-align:center;
+}
+.samapatti-stage .ss-label .ssl-sanskrit{font-family:var(--display);font-size:16px;color:var(--sanskrit);display:block;}
+.samapatti-stage .ss-label .ssl-roman{font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;display:block;}
+.samapatti-stage .ss-body{flex:1;font-size:14.5px;color:var(--ink-dim);padding-top:10px;}
+.samapatti-connector{text-align:left;padding-left:57px;color:var(--accent-soft);font-size:18px;margin:-10px 0;}
+
+footer.papertail{text-align:center;padding:48px 24px 80px;border-top:1px solid var(--rule);margin-top:60px;}
+footer.papertail .om{font-size:24px;color:var(--accent);margin-bottom:14px;}
+footer.papertail .omtatsat{font-size:14px;color:var(--ink-faint);font-style:italic;margin-bottom:30px;}
+footer.papertail .stamp{font-size:13px;color:var(--ink-faint);line-height:1.9;}
+footer.papertail .stamp b{color:var(--ink-dim);}
+
+@media(max-width:600px){
+  body{font-size:16.5px;}
+  .title-block h1{font-size:30px;}
+  .title-block h2.subtitle{font-size:18px;}
+  h2.sectiontitle{font-size:24px;}
+  nav.toc a{margin:0 6px;display:inline-block;}
+  .astanga-rung .rung-num{width:34px;min-width:34px;}
+  .samapatti-stage .ss-label{min-width:100px;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brand">Cultural Musings</div>
+  <div class="platform-sub">Vedic &amp; Śāstric Research Platform</div>
+  <div class="series-tag">Series B · Part Six of Twelve</div>
+  <div class="devanagari-strip">चित्तवृत्तिनिरोधः · अष्टाङ्गयोगः · समाधिः · धारणा · ध्यानम् · संस्कारः · पुरुषः · कैवल्यम् · भावनासम्बन्धः</div>
+
+  <nav class="toc" aria-label="This paper">
+    <a href="#series-context">Series Context</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#sec-1">I. The Yogasūtra's Architecture</a>
+    <a href="#sec-2">II. Citta and Its Vṛttis</a>
+    <a href="#sec-3">III. The Five Vṛtti-Categories</a>
+    <a href="#sec-4">IV. Aṣṭāṅga: The Eight-Limbed Programme</a>
+    <a href="#sec-5">V. Dhāraṇā, Dhyāna, Samādhi: The Inner Triad</a>
+    <a href="#sec-6">VI. Samāpatti-States: The Phenomenology of Absorbed Attention</a>
+    <a href="#sec-7">VII. Bhāvanā and Dhāraṇā: The Bridge from Part Five</a>
+    <a href="#sec-8">VIII. Saṃskāra in Yoga-Śāstra: Formation and Dissolution</a>
+    <a href="#sec-9">IX. Puruṣa and the Collective Ground</a>
+    <a href="#sec-10">X. Major Commentarial Traditions</a>
+    <a href="#sec-11">XI. Limits and the Forward Problem</a>
+    <a href="#sec-12">XII. Forward to Part Seven</a>
+    <a href="#footnotes">Footnotes</a>
+    <a href="#bibliography">Bibliography</a>
+    <a href="#glossary">Glossary</a>
+  </nav>
+
+  <nav class="allparts" aria-label="Series B — all parts">
+    <a href="#">Part I · Vāk as the Ground of Psychological Awareness</a> ·
+    <a href="#">Part II · Śabda-Bheda: The Birth of Discrimination</a> ·
+    <a href="#">Part III · Sāma Veda and the Birth of Affect</a> ·
+    <a href="#">Part IV · Nāṭyaśāstra I: Rasa</a> ·
+    <a href="#">Part V · Nāṭyaśāstra II: Abhinaya</a> ·
+    <span class="current">Part VI · Yoga-Śāstra: Citta-Vṛtti</span> ·
+    <a href="#">Part VII · Proliferation I: Vyākaraṇa, Nyāya</a> ·
+    <a href="#">Part VIII · Proliferation II: Arthaśāstra, Āyurveda</a> ·
+    <a href="#">Part IX · Mantra-Śāstra</a> ·
+    <a href="#">Part X · Case Studies</a> ·
+    <a href="#">Part XI · Dharma and Adharma</a> ·
+    <a href="#">Part XII · Pratiprasava</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="title-block">
+    <div class="kicker">Series B · Part VI of XII · White Paper</div>
+    <h1>Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</h1>
+    <h2 class="subtitle">The Pātañjala System as the Theory of Citta-Formation that Underlies Both the Actor's Bhāvanā and the Sahṛdaya's Rasa-Competence — Vṛtti, Nirodha, Saṃskāra, and the Eight-Limbed Path to Samādhi</h2>
+    <div class="meta-grid">
+      <span><b>Series</b> B · Part VI of XII</span>
+      <span><b>Vāk Level</b> Paśyantī — speech as concentrated inner vision, prior to outward differentiation</span>
+      <span><b>Format</b> White Paper · 68 Pages</span>
+      <span><b>Predecessor</b> Series B · Part V — Nāṭyaśāstra II: Abhinaya and Embodied Expression</span>
+    </div>
+  </div>
+
+  <div class="ornament">↗</div>
+
+  <section id="series-context" class="context-box">
+    <h3>Where Part Six Stands in the Series</h3>
+    <p>Part Five closed by specifying three limits that the abhinaya-system's technical account cannot resolve from within its own domain. The first — the cultivation-question: what training practice, over what duration and through what methods, produces the concentrated imaginative orientation bhāvanā requires — belongs to Yoga-śāstra's disciplinary specificity. The second — the collective experience question: how the co-presence of multiple sahṛdayas modifies individual rasāsvādana — finds partial address in the Yoga-śāstric concept of puruṣa as a shared ontological ground. The third — the citta-formation question: what it is to train a mind toward the quality of absorbed, discriminating, affectively open attention that makes Zone Two functioning possible — is precisely Pātañjali's subject-matter in the Yogasūtra, and this paper exists because that subject-matter is the deepest explanatory layer underneath everything Parts Three through Five have developed.</p>
+
+    <p>The handoff from Part Five is not merely thematic but structurally determined. Part Five Section 9.3 identified the actor's bhāvanā-practice as structurally parallel to Pātañjali's dhāraṇā — sustained concentration on a single object — and named that parallel as the primary bridge-concept between the aesthetic domain (Parts IV–V) and the yogic domain (Part VI). Part Five Section 7.4's three-zone model (fully voluntary / Zone Two bhāvanā / Zone Three involuntary) maps directly onto Pātañjali's account of the citta's relationship to voluntary and involuntary processes, and the present paper develops that mapping in full. And Part Five Section 11.3 identified the citta-formation question as requiring Yoga-śāstra's disciplinary specificity to resolve — specifying, with deliberate precision, that abhinaya-theory reaches its own outer boundary exactly where Yoga-śāstra's inner subject-matter begins.</p>
+
+    <h4>The Central Claim of Part Six</h4>
+    <p>This paper's central claim is that Pātañjali's Yogasūtra, read through its principal commentaries (Vyāsa's Bhāṣya, Vācaspati Miśra's Tattvavaiśāradī, Vijñānabhikṣu's Yogavārttika), constitutes not merely a discipline of individual psychological self-regulation but a systematic account of what the citta must become — through the progressive restraint of its habitual vṛtti-patterns and the cultivation of the samāpatti-states — in order to function as the instrument through which the highest forms of discriminative knowledge (viveka-khyāti), aesthetic absorption (rasāsvādana), and imaginative inhabitation (bhāvanā) become possible. Yoga-śāstra is, on this reading, the depth-psychology that Parts Three through Five presupposed without articulating: the theory of the trained, stable, concentrated mind that makes the Sāmavedic priest's tonal discrimination, the classical dancer's sāttvika absorption, and the sahṛdaya spectator's rasa-competence all achievable rather than merely conceivable.</p>
+
+    <table class="partmap">
+      <tr><th>Part</th><th>Psychological Stage</th><th>Focus</th></tr>
+      <tr><td>I</td><td>Pre-differentiated awareness</td><td>Vāk as the Ground of Psychological Awareness</td></tr>
+      <tr><td>II</td><td>Differentiation / discernment</td><td>Śabda-Bheda: The Birth of Discrimination</td></tr>
+      <tr><td>III</td><td>Feeling-toned cognition</td><td>Sāma Veda and the Birth of Affect</td></tr>
+      <tr><td>IV</td><td>Aesthetic embodiment</td><td>Nāṭyaśāstra I: Rasa</td></tr>
+      <tr><td>V</td><td>Somatic cognition</td><td>Nāṭyaśāstra II: Abhinaya</td></tr>
+      <tr><td class="this-paper">VI</td><td class="this-paper">Self-regulation / will</td><td class="this-paper">This Paper — Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</td></tr>
+      <tr><td>VII</td><td>Specialised cognition</td><td>Proliferation of Śāstra I: Vyākaraṇa, Nyāya</td></tr>
+      <tr><td>VIII</td><td>Social/embodied extension</td><td>Proliferation of Śāstra II: Arthaśāstra, Āyurveda</td></tr>
+      <tr><td>IX</td><td>Recursive self-application</td><td>Mantra-Śāstra: Vāk Returning as Sound-Technology</td></tr>
+      <tr><td>X</td><td>Applied/historical synthesis</td><td>Case Studies in Śabda-to-Śāstra Transmission</td></tr>
+      <tr><td>XI</td><td>Ethical-metaphysical synthesis</td><td>Dharma and Adharma</td></tr>
+      <tr><td>XII</td><td>Closing return</td><td>Pratiprasava: Vāk's Return and the Handoff Beyond</td></tr>
+    </table>
+  </section>
+
+  <div class="ornament">✦</div>
+
+  <section id="abstract">
+    <h2 class="sectiontitle" style="font-size:24px;">Abstract</h2>
+    <p>This paper develops, across twelve sections, a full philosophical and technical reconstruction of the Pātañjala Yoga-śāstra as the systematic theory of citta-formation that supplies the depth-psychological foundation for the aesthetic and performative capacities Parts Three through Five examined at the level of practice. The paper proceeds as follows. First, it establishes the Yogasūtra's architecture — four pādas, 196 sūtras — and the relationship between Pātañjali's text, Vyāsa's Bhāṣya, and the subsequent commentarial tradition, distinguishing the Yogasūtra's own technical vocabulary from its commentarial elaborations. Second, it develops the citta-concept in full: citta as the compound mental instrument composed of buddhi (discriminative intelligence), ahaṃkāra (the sense of individual selfhood), and manas (the sense-collating faculty), whose relationship to puruṣa (pure consciousness) is the central ontological problem Yoga-śāstra exists to resolve in practice rather than merely in theory. Third, it reconstructs the five vṛtti-categories (pramāṇa, viparyaya, vikalpa, nidrā, smṛti) as the five modes of the citta's ordinary fluctuating activity, whose collective restraint (nirodha) defines yoga in Pātañjali's own opening sūtra. Fourth, it examines the aṣṭāṅga or eight-limbed programme as a progressive citta-formation curriculum, treating each limb's function within the overall progression and its relationship to the limbs preceding and following it. Fifth, it develops the inner triad of the last three limbs — dhāraṇā (sustained concentration), dhyāna (unbroken meditative absorption), and samādhi (the fully absorbed state) — as a phenomenologically progressive sequence whose internal structure the paper maps in detail through the samāpatti-concept. Sixth, it develops the samāpatti-states (savitarka, nirvitarka, savicāra, nirvicāra, sānanda, sāsmitā, and the asamprajñāta beyond them) as a phenomenological ladder of progressive cognitive-attentional refinement, tracing the movement from object-supported attention through conceptually-purified attention to the objectless absorption that approaches the limit of citta-activity altogether. Seventh, it develops the paper's central bridge-argument: the structural identity between the actor's Zone Two bhāvanā-practice (Part Five Sections 7.2–7.4) and Pātañjali's dhāraṇā, establishing that the actor's disciplined imaginative inhabitation of a character's situation is formally a directed dhāraṇā on an imaginatively constructed object, whose success produces a form of dhyāna-level absorption (bhāva-samāveśa) that the Yoga-śāstric framework allows to be located with precision within the broader map of attentional training. Eighth, it develops the Yoga-śāstric account of saṃskāra-formation and dissolution (karmāśaya, vāsanā, saṃskāra-śeṣa) in its relationship to the affective-saṃskāra model Parts Three and Four employed, arguing that the Yoga-śāstric account provides the dynamic mechanism — how saṃskāras are formed, deepened, counteracted, and ultimately dissolved — that the rasa-theory and the Sāmavedic accounts presupposed without specifying. Ninth, it addresses the collective ground question (Part Five Section 11.2) through the Yoga-śāstric concept of puruṣa, developing the argument that puruṣa's characterisation as undivided and unbounded consciousness provides the ontological basis for understanding why multiple sahṛdayas, each individually formed and each undergoing individual rasāsvādana, nevertheless experience a qualitatively shared rasa-event during a single performance — the shared ground being not the psychologically individuated citta but the transpersonal puruṣa that each citta, in its moment of samādhi-adjacent rasāsvādana, approaches. Tenth, it examines the major commentarial traditions (Vyāsa, Vācaspati Miśra, Vijñānabhikṣu, and the modern interpretive tradition from Vivekananda through B.K.S. Iyengar to contemporary philosophical scholarship) as distinct interpretive responses to the same foundational text, with specific attention to their divergences on the puruṣa-citta relationship and its implications for the account of samādhi. Eleventh, it specifies three genuine limits in the Yoga-śāstric account as this series has employed it, preparing the ground for Part Seven's engagement with vyākaraṇa and nyāya as the śāstric disciplines in which the yogically-formed citta's discriminative capacity achieves its most technically refined expression. Twelfth, it executes the handoff to Part Seven.</p>
+
+    <div class="reading-note">
+      <b>Reading Note</b> — This paper presupposes Part Five's three-zone model (Section 7.4), the bhāvanā-mechanism (Section 7.2), the concept of bhāva-samāveśa (Section 9.2), and the saṃskāra-model of rasa-competence developed in Part Four (Sections VII–VIII). Readers without Part Four's sādhāraṇīkaraṇa-account and Part Five's Zone Two concept will find Section VII's bridge-argument inaccessible; those sections should be engaged before proceeding to Section VII. The Yoga-śāstric technical vocabulary introduced in Sections II through VI is developed from first principles and does not presuppose prior familiarity with Pātañjali's text, though Vyāsa's Bhāṣya in translation is recommended as a companion to Sections V–VI.
+    </div>
+  </section>
+
+  <h1 class="sectionhead" id="sec-1">I.</h1>
+  <h2 class="sectiontitle">The Yogasūtra's Architecture: Four Pādas, 196 Sūtras</h2>
+
+  <h3>1.1 The Text as Concentrated Technical Doctrine</h3>
+  <p>The Yogasūtra of Patañjali — composed, in the scholarly consensus, somewhere between the second century BCE and the fourth century CE, with the commentarial tradition anchored by Vyāsa's Bhāṣya around the fifth century CE — is one of the most economical technical documents in any philosophical tradition. Its 196 sūtras across four chapters (pādas) are not a philosophical treatise in the sense of an extended argumentative prose composition but a memorisation-and-commentary scaffold: maximally compressed formulations, stripped to the minimal phonemic content required to carry their technical load, whose full meaning is available only in conjunction with an authorised oral commentary transmitted by a qualified teacher. This is a text that could not be understood without a tradition, and whose design assumes a tradition as the condition of its legibility — a structural feature it shares with the Pāṇinian grammar Part Two examined, with the Sāmavedic chant-system Part Three examined, and with the Nāṭyaśāstra's technical chapters Part Five examined: all four are compressed technical manuals whose compression presupposes the living transmission-context that makes their brevity functional rather than merely obscure.</p>
+
+  <p>The four pādas organise the text's subject-matter in a progression whose logic this paper treats as deliberate and significant. The Samādhi-pāda (51 sūtras) defines yoga, specifies its goal, and maps the samādhi-states the practice aims at: it is the telos-first exposition, establishing where the discipline leads before describing how it is practiced. The Sādhana-pāda (55 sūtras) specifies the means — the aṣṭāṅga system's first five outer limbs (yama through pratyāhāra) and the theory of kleśas (afflictions) whose reduction these limbs accomplish. The Vibhūti-pāda (55 sūtras) treats the inner three limbs (dhāraṇā, dhyāna, samādhi in their combined operation as saṃyama) and the extraordinary perceptual and cognitive capacities (vibhūtis) their sustained practice makes available — capacities the tradition treats as signs of progress rather than as the practice's aim. The Kaivalya-pāda (34 sūtras) addresses the ultimate telos — kaivalya, the puruṣa's liberation from prakṛti's entanglement — and develops the ontological framework (the Sāṃkhya-derived categories of puruṣa, prakṛti, guṇas) that gives the entire practice its metaphysical orientation and justification.</p>
+
+  <h3>1.2 Pātañjala Yoga's Relationship to Sāṃkhya</h3>
+  <p>Pātañjala Yoga inherits from the Sāṃkhya philosophical system its basic ontological categories — the fundamental duality of puruṣa (pure unchanging consciousness) and prakṛti (the ever-changing material-psychic ground of all phenomenal existence) — and deploys them as the framework within which the Yoga-śāstric practice's purpose is defined and its progress measured. Puruṣa is pure witnessing awareness, without qualities, without modification, without agency: it neither thinks nor feels nor acts, but is that by which thinking, feeling, and acting are illuminated — the ultimate light-source of all cognitive and affective processes, not itself any of those processes. Prakṛti is the dynamic, three-guṇa totality of all that is not puruṣa: gross matter and subtle mind alike, including the citta's entire range of vṛtti-activities, are modifications of prakṛti rather than of puruṣa. The problem yoga exists to resolve is the beginningless misidentification (avidyā, false knowledge, the root kleśa) in which puruṣa mistakes itself as identical with prakṛti's modifications — in which pure witnessing consciousness believes itself to be the thinker, the feeler, the actor, the one who suffers and who desires. The practice's entire structure is organised around the progressive dissolution of this misidentification through the citta's own increasingly purified self-understanding, culminating in the kaivalya in which puruṣa rests in its own nature, fully distinguished from all prakṛtic modification.</p>
+
+  <h3>1.3 Why This Ontological Framework Matters for the Series</h3>
+  <p>The puruṣa-prakṛti framework is not merely a metaphysical presupposition that the Yoga-śāstric account carries as philosophical baggage from its Sāṃkhya inheritance; it is the framework within which the aesthetic and psychological accounts this series has developed receive their deepest available theoretical grounding. The rasa-theory's account of sādhāraṇīkaraṇa — the generalisation through which the particular, personally-identified spectator's emotion is transmuted into the universalised, aesthetically-distanced rasa-experience — names, in the Yoga-śāstric framework's terms, a moment in which the spectator's citta, ordinarily occupied with its own vṛtti-driven particular concerns, achieves a temporary reduction of those concerns sufficient for the latent saṃskāra to manifest as a shared affective form. This temporary reduction is structurally analogous to — though less complete than — the nirodha of ordinary vṛtti-activity that yoga's inner limbs progressively deepen toward samādhi. The sahṛdaya's rasāsvādana is, on this reading, a partial and temporarily-achieved approach toward the condition that the yogin's samādhi-practice approaches more fully and more sustainably: the condition of a citta sufficiently quieted that its own content — in the sahṛdaya's case, the universalised sthāyibhāva; in the yogin's case, the puruṣa's own unmodified nature — can become available to awareness without the distortion and fragmentation of ordinary vṛtti-driven cognitive activity.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-2">II.</h1>
+  <h2 class="sectiontitle">Citta and Its Structure: The Compound Mental Instrument</h2>
+
+  <h3>2.1 The Sūtra's Opening Definition</h3>
+
+  <div class="sanskrit-block">
+    योगश्चित्तवृत्तिनिरोधः
+    <span class="translit">yogaś citta-vṛtti-nirodhaḥ</span>
+    <span class="gloss">Yoga is the restraint of the citta's fluctuations. — YS I.2</span>
+  </div>
+  <p class="cite-source">Patañjali, Yogasūtra I.2</p>
+
+  <p>The Yogasūtra's second sūtra — the definition of yoga, preceded only by the atha yogānuśāsanam ("now, the discipline of yoga") that opens the text — is among the most concentrated technical formulations in any philosophical tradition. Three terms do the definition's entire work: citta (the compound mental instrument), vṛtti (the fluctuation, modification, or turning of that instrument), and nirodha (the restraint, cessation, or channelling of those fluctuations). Understanding yoga requires understanding each of these terms with precision and understanding their relationship with equal precision.</p>
+
+  <p>Citta, as Vyāsa's Bhāṣya specifies, is not a simple substance but a compound or layered faculty, comprising three distinguishable but operationally inseparable functions: buddhi (also called mahat, the great principle — the faculty of discriminative intelligence and decisional clarity), ahaṃkāra (the ego-sense, the appropriating function that applies the possessive marker "mine" and the identifying marker "I am this" to all experience), and manas (the sense-collating faculty that receives the raw data of sensory input, coordinates the sense-organs' multiple streams, and presents sorted perceptual objects to buddhi for evaluation and decision). These three together constitute the citta in its functional totality, and their interactions with each other — buddhi evaluating what manas presents; ahaṃkāra appropriating buddhi's evaluations as "my judgments," "my beliefs," "my knowledge" — constitute the vast majority of ordinary human cognitive and affective life.</p>
+
+  <h3>2.2 The Citta's Relationship to Puruṣa: The Problem of Reflection</h3>
+  <p>Puruṣa — the pure, unchanging, witnessing consciousness — does not interact with the citta in any causal sense (causal interaction would require puruṣa to be modified by the interaction, which contradicts its defining character as unmodifiable). The relationship between puruṣa and citta is instead understood, in the Sāṃkhya-Yoga framework, through the metaphor of reflection: the citta, in its most transparent or sāttvika state (when the rajas and tamas guṇas — the energising-agitating and obscuring-inertialising principles — are minimally operative), reflects puruṣa's light with the fidelity of a still, clear mirror; in its ordinary turbulent state (rajas predominating, vṛtti-activity constant), it reflects puruṣa's light in distorted, flickering, multiply-refracted form, such that the identification of the reflection with the original — taking the flickering citta-modification for puruṣa's own activity — is structurally unavoidable at the level of ordinary cognitive experience. Avidyā, the root kleśa, is precisely this structural unavoidability: not an error anyone makes deliberately, but the default condition of a citta in which the guṇic balance has not yet been shifted toward sufficient sattva-predominance to permit clear reflection and therefore clear discrimination (viveka) between puruṣa and its citta-reflection.</p>
+
+  <h3>2.3 The Five Kleśas: The Structural Sources of Vṛtti-Distortion</h3>
+  <p>Before specifying the vṛtti-categories themselves, the Yogasūtra identifies five kleśas — afflictions or distorting conditions — that are the structural sources of the citta's problematic vṛtti-production. The five are: avidyā (false knowledge, the root misidentification of puruṣa with prakṛti); asmitā (the ego-sense, the derivative misidentification of the seer with the instrument of seeing); rāga (attraction, the affective pull toward objects that have produced pleasure); dveṣa (aversion, the affective push away from objects that have produced pain); and abhiniveśa (the clinging to existence, the species-wide investment in continued personal survival). These five are not accidental or individually-produced cognitive errors but structural features of the citta's pre-yogic condition, and the aṣṭāṅga programme's successive limbs are organised precisely around their progressive attenuation: the outer limbs (yama through pratyāhāra) address the behavioural and sensory dimensions of kleśa-driven activity; the inner limbs (dhāraṇā through samādhi) address the cognitive and attentional dimensions at their root.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-3">III.</h1>
+  <h2 class="sectiontitle">The Five Vṛtti-Categories: A Taxonomy of Mental Fluctuation</h2>
+
+  <h3>3.1 Vṛtti as Modification</h3>
+  <p>Vṛtti — from √vṛt, "to turn, to move, to be active" — names, in the Yoga-śāstric context, any modification or activity of the citta: any turning of the mental instrument into a particular configuration, any actuation of the citta's potential into a specific cognitive act. Vṛttis are not in themselves problematic; they are the citta's mode of functioning, and functioning of some kind is necessary for any cognitive or affective life. What yoga aims at is not the elimination of all citta-activity (which would be cognitive death, not liberation) but the progressive replacement of the kleśa-driven, avidyā-rooted, reactive vṛtti-patterns of ordinary cognition with the increasingly concentrated, increasingly purified, increasingly non-reactive cognitive modes that the inner limbs develop — until, in the highest samādhi-states, even these refined cognitive modes are stilled in the nirodha that is yoga's culmination.</p>
+
+  <p>The Yogasūtra identifies five vṛtti-categories, each further subdivided into kleśa-laden (kliṣṭa) and non-kleśa-laden (akliṣṭa) forms — a subdivision that establishes, crucially, that not all instances of each vṛtti-type are equally problematic for the yogic project:</p>
+
+  <div class="vrtti-grid">
+    <div class="vrtti-card">
+      <span class="vc-sanskrit">प्रमाण</span>
+      <span class="vc-roman">Pramāṇa · Valid Knowing</span>
+      <p class="vc-def">The three valid means of knowledge: direct perception (pratyakṣa), inference (anumāna), and testimony (āgama). The citta operating in its knowledge-acquiring mode. Not inherently kleśa-laden, but easily appropriated by ahaṃkāra into "my knowledge," generating pride and attachment.</p>
+    </div>
+    <div class="vrtti-card">
+      <span class="vc-sanskrit">विपर्यय</span>
+      <span class="vc-roman">Viparyaya · Misperception</span>
+      <p class="vc-def">False knowledge whose basis does not match the object: the rope mistaken for a snake; the changeable citta mistaken for unchanging puruṣa. The structural home of avidyā, and the vṛtti-type most directly targeted by viveka-khyāti's progressive development.</p>
+    </div>
+    <div class="vrtti-card">
+      <span class="vc-sanskrit">विकल्प</span>
+      <span class="vc-roman">Vikalpa · Conceptual Construction</span>
+      <p class="vc-def">Verbal-cognitive construction without corresponding reality: the concept of "the soul's liberation," which names something real, and the concept of "a square circle," which does not. Language's productive capacity to generate objects that do not exist in perception but may guide or mislead cognitive activity. Critical for Part Two's account of śabda-bheda.</p>
+    </div>
+    <div class="vrtti-card">
+      <span class="vc-sanskrit">निद्रा</span>
+      <span class="vc-roman">Nidrā · Sleep</span>
+      <p class="vc-def">The citta's activity in the absence of ordinary cognitive support — the vṛtti whose content is the experience of absence or blankness itself. Included because even sleep is a citta-modification, whose quality (refreshing / disturbed, deep / shallow) affects the citta's post-sleep capacity for concentration and discrimination.</p>
+    </div>
+    <div class="vrtti-card">
+      <span class="vc-sanskrit">स्मृति</span>
+      <span class="vc-roman">Smṛti · Memory</span>
+      <p class="vc-def">The retention of past experience without loss of its cognitive form: the saṃskāra's active form as recalled content. The mechanism through which past experience — including all past affective experience — remains operative in the present citta and conditions current perception, judgment, and response. Directly continuous with the saṃskāra-model Parts III and IV employed.</p>
+    </div>
+  </div>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-4">IV.</h1>
+  <h2 class="sectiontitle">Aṣṭāṅga: The Eight-Limbed Programme as Progressive Citta-Formation</h2>
+
+  <h3>4.1 The Curriculum Logic of the Eight Limbs</h3>
+  <p>The eight limbs of Pātañjala Yoga are not eight independent practices but a single progressive curriculum in which each limb both requires and prepares the limb that follows it. The outer five limbs — yama, niyama, āsana, prāṇāyāma, pratyāhāra — address the conditions under which concentrated inner work is possible: behavioural patterning (yama and niyama), bodily stability and ease (āsana), prāṇic regulation (prāṇāyāma), and sensory withdrawal (pratyāhāra). The inner three — dhāraṇā, dhyāna, samādhi — are the concentrated inner work itself, and cannot be consistently achieved without the outer five's prior establishment. The progression from outer to inner is not temporal-sequential in the sense of completing the outer limbs and then beginning the inner ones; it is structural-preparatory in the sense that each outer limb creates the conditions for the next limb's increasing concentration to be stable rather than interrupted by the conditions the outer limb addresses.</p>
+
+  <div class="astanga-ladder">
+    <div class="astanga-rung">
+      <div class="rung-num">1</div>
+      <div class="rung-body">
+        <div class="rung-sanskrit">यम</div>
+        <div class="rung-roman">Yama · Ethical Restraints</div>
+        <div class="rung-def">The five abstentions: ahiṃsā (non-harming), satya (truthfulness), asteya (non-stealing), brahmacarya (continence), aparigraha (non-possessiveness). Universal in application (mahāvrata — the great vow, binding regardless of class, time, place, or circumstance). Addresses the behavioural dimension of kleśa-driven activity.</div>
+        <div class="rung-tag">Prerequisite: reduces the gross behavioural reinforcement of kleśas that would otherwise constantly disturb the citta's attentional capacity</div>
+      </div>
+    </div>
+    <div class="astanga-rung">
+      <div class="rung-num">2</div>
+      <div class="rung-body">
+        <div class="rung-sanskrit">नियम</div>
+        <div class="rung-roman">Niyama · Observances</div>
+        <div class="rung-def">The five cultivations: śauca (purity of body and mind), santoṣa (contentment), tapas (disciplined effort / austerity), svādhyāya (self-study / recitation of sacred texts), Īśvara-praṇidhāna (dedication to the Lord). Complements yama's restraints with positive cultivations that build the sattvic quality the citta needs for clear reflection.</div>
+        <div class="rung-tag">Builds sattva-predominance; contentment (santoṣa) directly counteracts rāga-dveṣa's perpetual dissatisfaction</div>
+      </div>
+    </div>
+    <div class="astanga-rung">
+      <div class="rung-num">3</div>
+      <div class="rung-body">
+        <div class="rung-sanskrit">आसन</div>
+        <div class="rung-roman">Āsana · Posture</div>
+        <div class="rung-def">A stable, comfortable, sustained bodily position — Pātañjali's own specification is minimal: sthira-sukham āsanam ("posture is [what is] steady and easeful"). The Yogasūtra does not enumerate specific postures; this is a later development of the haṭha-yoga tradition. The functional purpose is the elimination of bodily restlessness as a source of citta-disturbance during the inner limbs' practice.</div>
+        <div class="rung-tag">Removes the body from the list of disturbances: the citta cannot sustain dhāraṇā if the body is demanding attention through discomfort or instability</div>
+      </div>
+    </div>
+    <div class="astanga-rung">
+      <div class="rung-num">4</div>
+      <div class="rung-body">
+        <div class="rung-sanskrit">प्राणायाम</div>
+        <div class="rung-roman">Prāṇāyāma · Breath-Regulation</div>
+        <div class="rung-def">The deliberate regulation of the breath's four phases — pūraka (inhalation), kumbhaka (retention after inhalation), recaka (exhalation), bāhya-kumbhaka (suspension after exhalation) — in terms of duration, continuity, and place of focus. Prāṇāyāma's yogic function is to regulate the prāṇic dimension of citta-activity: the breath's rhythm and the citta's activity-level are, in the Indian physiological model, mutually interdependent, such that deliberate breath-regulation induces a corresponding regulation of the citta's fluctuation-rate.</div>
+        <div class="rung-tag">Acts as the bridge between outer and inner: tataḥ kṣīyate prakāśāvaraṇam — "thereby the covering of the inner light is thinned" (YS II.52)</div>
+      </div>
+    </div>
+    <div class="astanga-rung">
+      <div class="rung-num">5</div>
+      <div class="rung-body">
+        <div class="rung-sanskrit">प्रत्याहार</div>
+        <div class="rung-roman">Pratyāhāra · Sensory Withdrawal</div>
+        <div class="rung-def">The withdrawal of the sense-faculties from their objects — not the cessation of sensory functioning (the eyes remain capable of seeing) but the de-coupling of the citta's attention from sensory input, so that the sense-faculties no longer pull the citta's attention outward automatically. Pratyāhāra is simultaneously the last of the outer limbs and the necessary precondition of the inner ones: without it, dhāraṇā is constantly interrupted by uninvited sensory input.</div>
+        <div class="rung-tag">The hinge: the last outer limb and the gateway to the inner triad</div>
+      </div>
+    </div>
+    <div class="astanga-rung highlight">
+      <div class="rung-num">6</div>
+      <div class="rung-body">
+        <div class="rung-sanskrit">धारणा</div>
+        <div class="rung-roman">Dhāraṇā · Sustained Concentration</div>
+        <div class="rung-def">The binding of the citta to a single locus (deśa) — a specific object, region of the body, concept, image, or mantra — without the habitual drifting to other objects that characterises the pre-pratyāhāra citta. The object of dhāraṇā may be gross (a visible form) or subtle (a concept, a prāṇic centre), internal or external. What constitutes dhāraṇā as a distinct limb is the deliberate and sustained maintenance of the citta's orientation toward the chosen locus against its own habitual drift.</div>
+        <div class="rung-tag">Bridge to Part Five: the actor's bhāvanā is structurally a dhāraṇā on an imaginatively constructed object (see Section VII)</div>
+      </div>
+    </div>
+    <div class="astanga-rung highlight">
+      <div class="rung-num">7</div>
+      <div class="rung-body">
+        <div class="rung-sanskrit">ध्यान</div>
+        <div class="rung-roman">Dhyāna · Unbroken Absorption</div>
+        <div class="rung-def">The continuous, unbroken flow of the citta's cognitive content toward the chosen object — dhāraṇā sustained past the threshold at which the maintenance-effort itself becomes transparent and the citta's orientation toward its object becomes the citta's entire activity. The distinction from dhāraṇā is one of continuity: dhāraṇā still involves discrete returns of attention after brief driftings; dhyāna is the state in which the drift no longer occurs and the citta's activity is fully absorbed in its object.</div>
+        <div class="rung-tag">Corresponds to bhāva-samāveśa (Part V Section 9.2): the actor in deep bhāvanā is in a dhyāna-equivalent absorption in the character's situation</div>
+      </div>
+    </div>
+    <div class="astanga-rung highlight">
+      <div class="rung-num">8</div>
+      <div class="rung-body">
+        <div class="rung-sanskrit">समाधि</div>
+        <div class="rung-roman">Samādhi · Complete Absorption</div>
+        <div class="rung-def">The condition in which the citta's own cognitive form — its awareness of itself as cognising — becomes transparent, and only the object itself shines forth as if without a cognising subject: tad-evārtha-mātra-nirbhāsaṃ svarūpa-śūnyam iva samādhiḥ (YS III.3). The culmination of the inner triad, achieved in progressive stages (the samāpatti-states) from object-supported to objectless.</div>
+        <div class="rung-tag">The condition toward which rasāsvādana is a partial, aesthetically-achieved approach (see Section IX)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-5">V.</h1>
+  <h2 class="sectiontitle">Dhāraṇā, Dhyāna, Samādhi: The Inner Triad and Saṃyama</h2>
+
+  <h3>5.1 Saṃyama: The Three Inner Limbs as a Unified Operation</h3>
+  <p>The Vibhūti-pāda introduces the concept of saṃyama — the simultaneous, unified practice of dhāraṇā, dhyāna, and samādhi applied to a single object — as the operative concept governing the inner triad's practical application. Saṃyama is not the sequential performance of dhāraṇā followed by dhyāna followed by samādhi; it is the achievement, on a given object, of the full three-fold depth simultaneously: the object is held in concentrated attention (dhāraṇā), the attention flows without interruption (dhyāna), and the cognitive boundary between object and cogniser becomes transparent (samādhi), all as aspects of a single attentional event rather than as successive stages of a process. The vibhūtis — the extraordinary perceptual and cognitive capacities the Vibhūti-pāda catalogues, from knowledge of past and future to understanding of others' minds to knowledge of the arrangements of the stars — arise, on Pātañjali's account, from the application of saṃyama to appropriate objects: applying saṃyama to the operations of the body yields knowledge of the body; applying saṃyama to the structure of time yields knowledge of past and future; applying saṃyama to the nature of another person's citta yields access to that person's cognitive content.</p>
+
+  <p>The vibhūtis are treated in this paper not as the central subject-matter but as diagnostic indicators: they reveal what saṃyama's depth of attentional penetration achieves by cataloguing the kinds of knowledge that become available when the citta's attention achieves that penetration with respect to specific objects. For the series' purposes, the most significant vibhūti-claim is the one that applies saṃyama to the citta itself: saṃyama applied to the citta's own vṛtti-structure produces knowledge of the citta's own nature, which is the prerequisite for the viveka-khyāti (discriminative insight into the distinction between puruṣa and citta) that is the direct antechamber of kaivalya. This self-reflexive application of saṃyama — the citta examining itself with the full depth of its own concentrated attention — is the Yoga-śāstric parallel to the series' recurring theme (established from Part One's treatment of Vāk) of awareness becoming aware of its own ground.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-6">VI.</h1>
+  <h2 class="sectiontitle">Samāpatti-States: The Phenomenology of Progressive Absorbed Attention</h2>
+
+  <h3>6.1 What Samāpatti Names</h3>
+  <p>Samāpatti — from sam + ā + √pat, "to fall completely into," "to become fully coincident with" — names the specific phenomenological character of the citta's cognitive mode during the progressive stages of samādhi: the successive ways in which the citta "falls into" its object with increasing degrees of identity, transparency, and depth. The Yogasūtra identifies four principal samāpatti-states in the samprajñāta (with cognitive support) range and the asamprajñāta (without cognitive support) as the horizon beyond them.</p>
+
+  <div class="samapatti-track">
+    <div class="samapatti-stage">
+      <div class="ss-label">
+        <span class="ssl-sanskrit">सवितर्क</span>
+        <span class="ssl-roman">Savitarka</span>
+      </div>
+      <div class="ss-body">The citta absorbed in a gross external object (a form, a sound, a physical sensation) while still maintaining the ordinary conceptual-verbal overlay: the word for the object, the memory of prior encounters with it, and the inferential associations it carries are all simultaneously present in the citta's cognitive content along with the object's direct perceptual form. The most accessible and least refined of the samāpatti-states; the ordinary meditator's first experience of sustained concentration.</div>
+    </div>
+    <div class="samapatti-connector">↓</div>
+    <div class="samapatti-stage">
+      <div class="ss-label">
+        <span class="ssl-sanskrit">निर्वितर्क</span>
+        <span class="ssl-roman">Nirvitarka</span>
+      </div>
+      <div class="ss-body">The same gross object, but with the conceptual-verbal overlay progressively cleared: the word, the memory, and the inference have become quiescent, and the citta's cognitive content is the object's own form as it is in itself — no longer mediated through the linguistic and memorial matrix that ordinarily interposes itself between perception and its object. The tradition describes this as the citta shining with the object's own light, without the citta's own light contaminating the perception.</div>
+    </div>
+    <div class="samapatti-connector">↓</div>
+    <div class="samapatti-stage">
+      <div class="ss-label">
+        <span class="ssl-sanskrit">सविचार</span>
+        <span class="ssl-roman">Savicāra</span>
+      </div>
+      <div class="ss-body">The citta absorbed in a subtle object — a tanmātra (subtle sense-element), a prāṇic centre, a concept as a formal entity — while still maintaining the ordinary temporal-spatial coordinates and inferential elaborations that ordinary subtle cognition involves. The shift from the vitarka-pair to the vicāra-pair marks the shift of the absorption's object-domain from gross material objects to the subtle dimensions of prakṛti that ordinarily lie below the threshold of direct awareness.</div>
+    </div>
+    <div class="samapatti-connector">↓</div>
+    <div class="samapatti-stage">
+      <div class="ss-label">
+        <span class="ssl-sanskrit">निर्विचार</span>
+        <span class="ssl-roman">Nirvicāra</span>
+      </div>
+      <div class="ss-body">Subtle object, conceptual-temporal overlay cleared: the citta's absorption in the subtle object as it is in itself, without the inferential and temporal scaffolding ordinary subtle cognition requires. This is the state the Yogasūtra identifies, at YS I.47, as the threshold of adhyātma-prasāda — the inner clarity, the serene lucidity of the citta's most transparent condition prior to the asamprajñāta. The tradition regards nirvicāra-samāpatti as the highest reliably achievable concentration-state for most practitioners.</div>
+    </div>
+    <div class="samapatti-connector">↓</div>
+    <div class="samapatti-stage">
+      <div class="ss-label">
+        <span class="ssl-sanskrit">सानन्द · सास्मित</span>
+        <span class="ssl-roman">Sānanda / Sāsmitā</span>
+      </div>
+      <div class="ss-body">Two further samāpatti-states sometimes identified by Vyāsa's commentary as refinements beyond the nirvicāra: sānanda (absorption accompanied by the quality of ānanda, a bliss whose object is the citta's own sattvic nature) and sāsmitā (absorption accompanied only by the residual sense of "I am," the most attenuated form of ahaṃkāra). These approach the limit of samprajñāta samādhi: absorption still with some cognitive support, but support of the finest, most transparent kind.</div>
+    </div>
+    <div class="samapatti-connector">↓</div>
+    <div class="samapatti-stage">
+      <div class="ss-label">
+        <span class="ssl-sanskrit">असम्प्रज्ञात</span>
+        <span class="ssl-roman">Asamprajñāta</span>
+      </div>
+      <div class="ss-body">The objectless absorption: samādhi without cognitive support, the condition in which even the refined residual cognitive activity of sāsmitā has ceased and the citta rests in a condition that is not blank unconsciousness (nidrā) but the cessation of all vṛtti-activity in its ordinary sense — a state whose positive characterisation in terms of ordinary cognitive categories is impossible by definition, since all such characterisations are themselves vṛtti-products. The tradition names this as the direct antechamber of kaivalya and treats its stabilisation as the culminating attainment of the yogic path.</div>
+    </div>
+  </div>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-7">VII.</h1>
+  <h2 class="sectiontitle">Bhāvanā and Dhāraṇā: The Bridge from Part Five</h2>
+
+  <h3>7.1 Restating the Bridge-Argument</h3>
+  <p>Part Five Section 9.3 identified the actor's bhāvanā-practice as structurally parallel to Pātañjali's dhāraṇā and named that parallel as the primary bridge-concept between Parts Five and Six. The present section develops that bridge-argument in full, making explicit the structural identity it claims, specifying where identity ends and the two practices diverge, and drawing the implications for the broader theory of citta-formation the series is developing.</p>
+
+  <p>The structural identity claim is this: bhāvanā, as Part Five Section 7.2 described it, is the deliberate, sustained, concentrated orientation of the actor's cognitive-imaginative activity toward a specific object — the character's imaginatively constructed situation — maintained over the duration of a scene or role with the aim of producing, through that sustained orientation, the Zone Two sāttvika responses that constitute the scene's most reliable anubhāva-production. Dhāraṇā, as Section IV.6 above described it, is the deliberate, sustained, concentrated orientation of the citta toward a specific locus — a chosen object — maintained against the citta's habitual drift with the aim of progressively deepening the citta's attentional penetration of that object toward the dhyāna-level continuity and the samādhi-level transparency that constitute the inner triad's progressive goal. The structural parallel is precise: both bhāvanā and dhāraṇā involve (a) deliberate initial direction of the citta's attention toward a chosen object; (b) sustained maintenance of that directional orientation against habitual drift; (c) the deepening, through sustained maintenance, of the citta's attentional quality from voluntary concentration through absorbed continuity to the threshold of transparent identity with the object; and (d) the production, through that deepening, of cognitive and affective events (sāttvika responses in the actor's case, viveka-insights in the yogin's case) that do not occur in the ordinary vṛtti-driven citta's spontaneous activity.</p>
+
+  <h3>7.2 Where the Practices Diverge</h3>
+  <p>Three divergences between bhāvanā and dhāraṇā are significant enough to require explicit statement, both to clarify the bridge-argument's scope and to establish what Part Six can add to Part Five's account beyond merely translating the latter's vocabulary into the former's. First, bhāvanā's object is always a narratively-constructed, imaginatively-populated scenario — the character's situation — rather than a single, simple, non-narrative object of the kind Yoga-śāstra typically employs (a mantra, a prāṇic centre, a deity's form). This narrative complexity means that bhāvanā maintains the citta in a more cognitively elaborated form of concentration than standard dhāraṇā: the scenario's narrative detail must be simultaneously available and simultaneously subordinated to the single affective orientation that the bhāva requires, producing a mode of concentration that is broader in cognitive content but narrower in affective direction than typical dhāraṇā's single-object focus. Second, bhāvanā is directed outward in its communicative purpose — the actor's concentrated absorption must generate behaviours that communicate to an audience — while dhāraṇā is directed inward in its cognitive purpose, with no communicative obligation. This outward-directedness means bhāvanā cannot achieve the full withdrawal from sensory engagement (pratyāhāra) that standard yogic dhāraṇā requires; it operates in a state of active performative engagement with the external world, not withdrawal from it. Third, bhāvanā aims at the Zone Two sāttvika responses as its intermediate goal rather than at viveka-khyāti or kaivalya; its telos is the production of rasa in a sahṛdaya audience rather than the yogin's own liberation from prakṛtic entanglement.</p>
+
+  <h3>7.3 The Rasa-Experience as Samādhi-Adjacent: Refining the Parallel</h3>
+  <p>Part Four's account of sādhāraṇīkaraṇa established that rasāsvādana involves, on the spectator's side, a temporary suspension of the ordinarily-active egoic identification with one's own personal circumstance — the suspension through which the particular bhāva of the depicted character becomes available, generalised and universalised, to the spectator's citta. In Yoga-śāstric terms, this temporary suspension is precisely a temporary reduction in the ahaṃkāra's activity: the appropriating function that ordinarily applies "mine" and "I am" to all experiential content is temporarily, aesthetically quieted by the performance's absorbing vividness, and in that quieting the latent sthāyibhāva-saṃskāra can manifest not as "my grief" or "my love" but as grief or love as such — the universalised affective form that rasa-theory names. This structure maps onto the savitarka-to-savicāra movement within the samāpatti sequence: the ordinary, pre-rasāsvādana spectator is in a savitarka-equivalent condition (perceiving the performance through the verbal-memorial-inferential overlay of personal identification); the sahṛdaya in full rasāsvādana is in a savicāra or nirvicāra-adjacent condition (perceiving the rasa's universalised form with the ordinary overlay of personal appropriation temporarily cleared). Rasāsvādana is not samādhi — the clearing is temporary, aesthetically-induced, and does not achieve the depth or stability that the yogic inner limbs' sustained practice achieves — but it is samādhi-adjacent in the sense of being structurally of the same kind, approached from the aesthetic rather than the disciplinary direction.</p>
+
+  <div class="formula-box">
+    <div class="formula-main">भावना → धारणा → ध्यानम् → भावसमावेश → रसः</div>
+    <div class="formula-translit">bhāvanā → dhāraṇā → dhyāna → bhāva-samāveśa → rasa</div>
+    <div class="formula-note">The actor's progression maps onto the yogic inner triad: bhāvanā is the actor's mode of dhāraṇā; the unbroken sustained absorption in the character's situation is the actor's mode of dhyāna; bhāva-samāveśa (the complete inward coincidence with the character's bhāva, Part V Section 9.2) is the actor's mode of samādhi — and from this absorption, Zone Two sāttvika responses arise, constituting the anubhāvas through which a sahṛdaya achieves their own samādhi-adjacent rasāsvādana.</div>
+  </div>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-8">VIII.</h1>
+  <h2 class="sectiontitle">Saṃskāra in Yoga-Śāstra: Formation, Depth, and Dissolution</h2>
+
+  <h3>8.1 The Dynamic Account of Saṃskāra</h3>
+  <p>Parts Three and Four employed the saṃskāra-concept as a structural feature of the citta's affective history: the traces left by past experience that condition the citta's current response-capacity and constitute the latent "library" from which rasa-contact draws. The Yoga-śāstric account of saṃskāra (treated most systematically in the Kaivalya-pāda) provides what those earlier treatments presupposed without developing: a dynamic account of how saṃskāras are formed, how they deepen, how they can be counteracted, and how they are ultimately dissolved in the condition the tradition calls nirbīja samādhi — the seedless absorption in which even the most subtle saṃskāra-residue has been consumed.</p>
+
+  <p>Every vṛtti — every modification of the citta — leaves a saṃskāra: a residual trace or potency that disposes the citta toward future vṛttis of the same type. Saṃskāras are the mechanism of habit in the deepest sense: not merely behavioural habit but cognitive, affective, and perceptual habit — the accumulated weighting of the citta toward certain types of response, certain modes of perception, certain patterns of reaction — that is the product of everything the citta has ever undergone. Saṃskāras and vṛttis are in a circular generative relationship: vṛttis produce saṃskāras, and saṃskāras produce the dispositions that make certain future vṛttis more likely. This circularity is what gives the kleśas their tenacity: the vṛttis driven by avidyā and rāga-dveṣa produce saṃskāras that deepen the citta's disposition toward avidyā-driven and rāga-dveṣa-driven vṛttis, which produce further deepening saṃskāras, in a self-reinforcing cycle that ordinary, undisciplined cognitive activity cannot break because every effort to break it from within the cycle uses the very cognitive instruments the cycle has shaped.</p>
+
+  <h3>8.2 Pratipakṣa-Bhāvanā: The Cultivation of Counterweights</h3>
+  <p>The Yogasūtra's practical response to the saṃskāra-circularity problem — specified in YS II.33–34 within the discussion of yama — is the method of pratipakṣa-bhāvanā: the deliberate cultivation (bhāvanā — and here the term appears in its full Yoga-śāstric technical sense, which is cognate with but broader than Part Five's performative-technical sense) of the opposite cognitive orientation to whatever kleśa-driven vṛtti is currently active. When aversion (dveṣa) arises toward a specific object, the deliberate cultivation of positive regard or at minimum neutral attention toward that object produces a counter-saṃskāra that begins to reduce the dveṣa-saṃskāra's dominance over the citta's future responses. When violence (hiṃsā) is contemplated, the deliberate cultivation of ahiṃsā-oriented thought produces a counter-saṃskāra in the ahiṃsā-direction. Over time and with sustained practice, the counter-saṃskāras can achieve dominance over the kleśa-saṃskāras — the citta's habitual weighting shifts from kleśa-driven response toward more sāttvic, less reactive response — producing the behavioural and cognitive changes the yama-niyama limbs cultivate at the level of gross conduct and that the inner limbs then address at their subtler cognitive roots.</p>
+
+  <h3>8.3 Saṃskāra and the Sahṛdaya's Rasa-Competence</h3>
+  <p>The dynamic account of saṃskāra-formation and counter-saṃskāra-cultivation provides the mechanism that the rasa-theory's account of sahṛdaya-formation implicitly required but did not specify. Abhinavagupta's account of the sahṛdaya (Part Four Section VIII) established that rasa-competence depends on a citta enriched by the saṃskāras of wide and deep aesthetic and emotional experience — a citta whose saṃskāra-library is sufficiently rich and sufficiently varied that the performance's vibhāva-anubhāva configuration can precipitate the manifestation of the relevant latent sthāyibhāva-saṃskāra with sufficient vividness for rasāsvādana to occur. The Yoga-śāstric account specifies how that saṃskāra-library is built: through the accumulated vṛtti-traces of genuine aesthetic experience, genuine affective engagement, genuine imaginative inhabitation of situations not one's own — each such experience leaving its saṃskāra, deepening the citta's capacity for the relevant type of response, until the citta has achieved the degree of saṃskāra-richness in the relevant affective domain that makes it a genuine sahṛdaya rather than merely a spectator. Sahṛdaya-formation is, on this analysis, itself a form of yogic cultivation — not the deliberate, disciplined, limb-by-limb cultivation of the aṣṭāṅga system, but the more diffuse and experientially-immersive cultivation that wide, deep, and open aesthetic and emotional experience produces over a lifetime.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-9">IX.</h1>
+  <h2 class="sectiontitle">Puruṣa and the Collective Ground of Experience</h2>
+
+  <h3>9.1 The Problem Part Five Left Open</h3>
+  <p>Part Five Section 11.2 identified the untheorised relationship between rasa-theory's individually-pitched account of rasāsvādana and the collective, co-present character of theatrical audience-experience as a genuine gap that Part Five's own account deepened rather than resolved. The specific form of the problem: if each sahṛdaya undergoes their own individual rasāsvādana through their own individual saṃskāra-activation process, what accounts for the qualitatively shared, collectively convergent character of the audience's rasa-experience — the sense in which the rasa-event is not merely N separate individual experiences occurring simultaneously in the same room but something experienced as genuinely common, as a shared event in a shared affective space?</p>
+
+  <h3>9.2 Puruṣa as Shared Ground</h3>
+  <p>The Yoga-śāstric concept of puruṣa provides the ontological basis for addressing this question, though — and this must be stated with care — the Pātañjala system's own account of puruṣa is, in the commentary tradition's dominant reading (the Sāṃkhya-influenced reading Vyāsa and Vācaspati Miśra develop), a pluralist account: there are many puruṣas, each distinct, each characterised by its own witnessing perspective. On this pluralist reading, puruṣa does not in itself provide the shared ground for which the collective rasāsvādana problem asks; each puruṣa remains its own private witness. However, the monistic readings of the Yoga-śāstric framework — most fully developed in the Kashmir Śaiva tradition, to which Abhinavagupta belongs and whose puruṣa-equivalent (cit, pure consciousness) is explicitly non-pluralist and fully shared — provide the required shared-ground concept. On the Abhinavagupta-reading, the sahṛdayas' individual rasāsvādana events are individual cittas' simultaneous approaches, from the direction of their individual saṃskāra-activations, toward a shared domain of pure affective form — the rasa as universalised, sādhāraṇīkaraṇa-purified affective experience — that is shared not merely as a type (multiple people having similar experiences) but as an event (multiple people's individual experiences converging on a common experiential ground that is the rasa itself, not its individual instances). The shared ground is the aesthetic-affective universalised form that sādhāraṇīkaraṇa produces: not any individual's saṃskāra but the saṃskāra's universalised content, which — precisely because it is universalised, stripped of personal particularity by the aesthetic distancing mechanism — is in principle available as the same object for every sufficiently formed sahṛdaya present.</p>
+
+  <h3>9.3 The Implications for Practice: Why Collective Performance Matters</h3>
+  <p>The Yoga-śāstric account's resolution of the collective ground problem carries a practical implication that neither rasa-theory alone nor yoga-theory alone makes available: the experience of a genuinely shared rasa-event — multiple sahṛdayas approaching the same universalised affective form from their individual directions — is, for each participant, an experience of their own citta's approach toward the universalised domain of affective form with an external confirmation that the approach has been achieved. The other audience members' visible, audible, recognisable signs of rasāsvādana — their own anubhāvas (the catch of breath, the stillness, the tears, the involuntary vocal responses) — function, for each individual sahṛdaya, as a real-time confirmation that what their own citta is approaching is genuinely the universalised form rather than a merely personal reaction. The collective theatrical space is, on this account, not merely a pragmatic arrangement for the efficient delivery of a performance to many people simultaneously but a mutual self-confirmation system: each audience member's individual rasāsvādana-approach is confirmed, validated, and deepened by the co-presence of others undergoing the same approach from their own individual directions. This is the closest the Indian tradition's theoretical account comes to a sociology of rasa — and it comes to it by way of the ontology of puruṣa, which is to say, by way of precisely the Yoga-śāstric framework Part Six exists to develop.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-10">X.</h1>
+  <h2 class="sectiontitle">Major Commentarial Traditions: Divergences and Their Stakes</h2>
+
+  <h3>10.1 Vyāsa's Bhāṣya: The Canonical Interpretive Framework</h3>
+  <p>Vyāsa's Bhāṣya — the earliest surviving commentary on the Yogasūtra, ascribed to a Vyāsa distinct from the Mahābhārata's Vyāsa though the attribution's historicity is debated — establishes the interpretive framework within which all subsequent commentaries operate, whether by elaborating, refining, or departing from it. Vyāsa's most significant contributions to the text's understanding are four. First, the enumeration and definition of the five vṛtti-categories in terms that remain authoritative across the tradition. Second, the specification of the citta's five levels of activity (kṣipta / vikṣipta / mūḍha / ekāgra / niruddha — scattered, distracted, dulled, one-pointed, restrained) as the five stages through which the yogic progression moves, establishing a psychological developmental sequence that maps onto the limbs' progressive curriculum. Third, the development of the samāpatti-states' detailed phenomenology, which the Yogasūtra's own sūtras describe with characteristic brevity and Vyāsa's commentary fills with the experiential specificity that makes the states practically recognisable. Fourth, the identification of Īśvara — the special puruṣa untouched by kleśas, karma, or their results (YS I.24) — as the object of praṇidhāna in the niyama-limb's fifth element, establishing devotional orientation toward Īśvara as a valid and efficacious method of citta-purification alongside the more technically-specified dhāraṇā-dhyāna-samādhi progression.</p>
+
+  <h3>10.2 Vācaspati Miśra and the Tattvavaiśāradī</h3>
+  <p>Vācaspati Miśra's ninth-century Tattvavaiśāradī — a sub-commentary on Vyāsa's Bhāṣya, and one of the Indian philosophical tradition's most technically precise secondary texts — deepens Vyāsa's framework on two points of particular relevance for this paper. First, Vācaspati develops the distinction between the citta's gross (sthūla) and subtle (sūkṣma) modifications in the context of the samāpatti-states' object-progressions with a precision that clarifies why the vitarka-to-vicāra transition represents a qualitative shift in the samādhi's depth rather than merely a change in its object-type: the vicāra-domain is not simply a different set of objects but a different level of prakṛti's subtle structure, accessible only when the citta's own activity has been sufficiently refined to operate at that subtler level without the grosser vṛtti-patterns that would distort or obscure it. Second, Vācaspati develops the saṃskāra-vāsanā distinction with precision: vāsanās are the more generic, species-wide affective dispositions (toward pleasure and pain, toward self-preservation, toward sensory engagement) that constitute the deepest layer of saṃskāra-residue, while individual saṃskāras are the specific traces of specific past experiences deposited on that generic substrate. This distinction clarifies why the nirbīja samādhi's dissolution of saṃskāras represents a qualitatively different achievement from any ordinary cognitive improvement: it is the dissolution not merely of specific experiential residues but of the vāsanā-substrate that makes saṃskāra-formation of any kind possible.</p>
+
+  <h3>10.3 The Modern Interpretive Tradition: Continuities and Departures</h3>
+  <p>The tradition of modern Yoga-śāstra interpretation — from Vivekananda's Raja Yoga (1896) through B.K.S. Iyengar's Light on the Yoga Sutras of Patanjali (1993) to the academic philosophical scholarship of Gerald Larson, Edwin Bryant, and David White — represents a substantial interpretive departure from the classical commentarial tradition in several respects relevant for this paper's purposes. Most significantly, the modern tradition has tended to decouple the Yoga-śāstric practice from its Sāṃkhya ontological context — emphasising the experiential and psychological dimensions of the eight limbs while treating the puruṣa-prakṛti framework as optional metaphysical scaffolding rather than as the essential theoretical context within which the practice's goals are defined. This decoupling has made Pātañjala Yoga far more accessible to practitioners from outside the Indian philosophical tradition, but it has come at the cost of precisely the conceptual resources this paper requires: the account of puruṣa as the shared ontological ground (Section IX), the account of kaivalya as the telos whose definition gives all the preceding stages their meaning, and the account of the saṃskāra-dissolution in nirbīja samādhi as qualitatively distinct from all prior attainments. This paper's engagement with the tradition is therefore anchored in the classical commentarial framework rather than the modern interpretive one.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-11">XI.</h1>
+  <h2 class="sectiontitle">Limits and the Forward Problem</h2>
+
+  <h3>11.1 The First Limit: Yoga-Śāstra's Individual Orientation</h3>
+  <p>The Yoga-śāstric account, even as supplemented by the Kashmir Śaiva framework's shared-puruṣa ontology, remains fundamentally oriented toward the individual practitioner's liberation as the practice's ultimate telos. The collective aesthetic experience that Part Five identified as untheorised and that Section IX of the present paper partially addressed through the puruṣa-concept is addressed only partially: the shared-ground account explains why multiple sahṛdayas can experience the same universalised rasa-event, but it does not address how the specifically social, institutionalised, and culturally-transmitted dimensions of rasa-competence are produced, maintained, and renewed across generations of practitioners and spectators. For this — for the account of how a tradition of shared saṃskāra-formation is institutionally maintained and transmitted — the series requires the śāstric frameworks of Part VII (vyākaraṇa and nyāya as institutions of discriminative knowledge) and Part X (case studies in transmission), not the Yoga-śāstric account's individually-oriented practice-theory.</p>
+
+  <h3>11.2 The Second Limit: The Body's Absence</h3>
+  <p>The Pātañjala system's treatment of the body — āsana as the third limb's concern — is notably minimal: the body is addressed as a potential source of disturbance to the inner limbs' practice, and its stabilisation in a comfortable and steady posture is specified as the āsana-limb's sufficient achievement. The elaborate engagement with the body as the primary instrument of expression and communication that Part Five's āṅgika-abhinaya account required — the body not merely stabilised but trained, articulated, and expressive in its every part, the body as the vehicle through which the actor's bhāvanā achieves its outward communicative effect — is entirely outside the Pātañjala framework's scope. This is not a failure of the Yoga-śāstric account within its own domain but a genuine limit of its relevance for the abhinaya problematic: the body's expressive-communicative function requires a somatic framework that the Pātañjala system does not supply and that Part Five had to reconstruct from the Nāṭyaśāstra's own technical chapters. Part Eight's treatment of Āyurveda will address the body from the complementary perspective of somatic intelligence and prāṇic constitution, beginning to supply what the Pātañjala framework leaves unaddressed.</p>
+
+  <h3>11.3 The Third Limit: Discriminative Knowledge and Its Linguistic Ground</h3>
+  <p>The Yoga-śāstric account of viveka-khyāti — the discriminative insight that is the direct antechamber of kaivalya — treats the instrument of discrimination (the yogically-formed citta in its most refined sattvic state) without addressing the linguistic and logical framework within which discrimination operates at the level of explicit, communicable, teachable knowledge. Viveka-khyāti is a direct perceptual achievement, not a discursive one: it is not the conclusion of an argument but the direct cognitive apprehension of the puruṣa-prakṛti distinction by a citta sufficiently purified to make that apprehension possible. But the tradition of śāstric knowledge — within which Pātañjali's own Yogasūtra operates, and which makes the yogic discrimination communicable, teachable, and institutionally transmissible — is a discursive, linguistic achievement. The relationship between the non-discursive discriminative apprehension that yoga aims at and the discursive, grammatically-structured, logically-organised communicative frameworks within which that apprehension is taught, transmitted, and applied is precisely the relationship that Part Seven's treatment of vyākaraṇa and nyāya will examine: the yogically-formed citta's discriminative capacity meeting the linguistically and logically structured frameworks through which discrimination becomes publicly available knowledge rather than private experiential achievement.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-12">XII.</h1>
+  <h2 class="sectiontitle">Forward to Part Seven: From Citta-Formation to Śāstric Discrimination</h2>
+
+  <h3>12.1 What This Paper Has Established</h3>
+  <p>This paper has developed nine principal results. First, it established the Yogasūtra's architecture and its relationship to Sāṃkhya ontology, specifying the puruṣa-prakṛti framework as the essential context within which the practice's goals are defined. Second, it developed the citta-concept in full — buddhi, ahaṃkāra, and manas as the compound instrument; the five kleśas as the structural sources of its distortion; the guṇas as the dynamic principles of its quality. Third, it reconstructed the five vṛtti-categories as the five modes of ordinary citta-activity whose collective restraint defines yoga. Fourth, it examined the aṣṭāṅga system as a progressive citta-formation curriculum, treating each limb's function and its relationship to the limbs it requires and prepares. Fifth, it developed the inner triad (dhāraṇā, dhyāna, samādhi) and the saṃyama-concept, with specific attention to the vibhūtis as diagnostic indicators of saṃyama's depth. Sixth, it mapped the samāpatti-states as a phenomenological ladder of progressive attentional refinement from savitarka to asamprajñāta. Seventh, it developed the paper's central bridge-argument: the structural identity between bhāvanā and dhāraṇā, the mapping of bhāva-samāveśa onto dhyāna-level absorption, and the characterisation of rasāsvādana as samādhi-adjacent in the sense of being structurally of the same kind approached from the aesthetic direction. Eighth, it developed the Yoga-śāstric account of saṃskāra-dynamics — formation, deepening, counter-saṃskāra cultivation, and dissolution — providing the dynamic mechanism the saṃskāra-model Parts Three and Four employed without specifying. Ninth, it addressed the collective ground problem through the puruṣa-concept, identifying the universalised rasa-event's shared character as grounded in the sādhāraṇīkaraṇa-purified affective form that approaches the character of puruṣa's own unbounded awareness.</p>
+
+  <section class="preview-box">
+    <h3>Preview of Part Seven: Proliferation I — Vyākaraṇa and Nyāya</h3>
+    <p>Part Seven will examine Pāṇini's Aṣṭādhyāyī (vyākaraṇa) and the Nyāya-sūtra of Akṣapāda Gautama (nyāya) as the two śāstric disciplines in which the yogically-formed citta's discriminative capacity — the viveka-khyāti the Yoga-śāstric account describes — achieves its most technically refined expression in the domains of linguistic structure and inferential logic respectively. Three contributions from the present paper feed directly into Part Seven's argument. First, Part Six's account of the citta's progressive refinement through the samāpatti-states establishes the kind of citta for which Pāṇini's grammatical metalanguage and Gautama's logical framework are the appropriate discriminative instruments. Second, Part Six's account of the vikalpa-vṛtti — the citta's verbal-constructive mode, capable of generating objects that correspond to no perceptual reality but that can guide or mislead cognitive activity — establishes the specific problem that Pāṇinian grammar's precision and Nyāya's inference-theory exist to address: the risk of vikalpa-products that are internally coherent verbal constructions without extra-linguistic referents, which both disciplines develop elaborate technical resources for identifying and eliminating. Third, Part Six's identification of the discriminative-knowledge limit (Section 11.3) — the gap between viveka-khyāti as non-discursive direct apprehension and śāstric knowledge as discursive, communicable, institutionally-transmissible understanding — establishes the problem that Part Seven exists to address at its root.</p>
+  </section>
+
+  <blockquote class="pull">
+    The yogin's discipline is not an escape from the world of word and image and performed gesture but the deepening of the instrument — the citta — through which word, image, and gesture are received, discriminated, and understood. A citta that has learned to hold its attention steady knows something about concentration that an untrained citta cannot know; and what it knows is not merely a technical skill but an epistemically significant expansion of what can be perceived, discriminated, and communicated. The Sāmavedic priest, the classical dancer, and the Pātañjala yogin are, in this series' developing argument, not three separate cultural achievements but three articulations of the same fundamental recognition: that the quality of the attending mind determines the quality of what is attended to, and that the deliberate cultivation of attentional quality is therefore the deepest form of knowledge-production available to a human being.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <section id="footnotes">
+    <h2 class="sectiontitle" style="font-size:22px;">Footnotes</h2>
+    <ol class="footnotes">
+      <li><sup>1</sup> On the Yogasūtra's dating and the commentarial tradition's relationship to the root text: Gerald James Larson and Ram Shankar Bhattacharya, eds., <i>Yoga: India's Philosophy of Meditation</i> (Delhi: Motilal Banarsidass, 2008), Introduction; and Edwin F. Bryant, trans. and comm., <i>The Yoga Sūtras of Patañjali</i> (New York: North Point Press, 2009), Introduction.</li>
+      <li><sup>2</sup> On the Sāṃkhya ontological framework and its Yoga-śāstric inheritance: Knut Axel Jacobsen, <i>Prakṛti in Sāṃkhya-Yoga</i> (New York: Peter Lang, 1999); and Ian Whicher, <i>The Integrity of the Yoga Darśana</i> (Albany: SUNY Press, 1998).</li>
+      <li><sup>3</sup> On the five kleśas and their role in the aṣṭāṅga curriculum: Vyāsa, <i>Bhāṣya</i> on YS II.3–9, trans. Bryant; and B.K.S. Iyengar, <i>Light on the Yoga Sutras of Patanjali</i> (London: HarperCollins, 1993), pp. 101–117.</li>
+      <li><sup>4</sup> On the five vṛtti-categories: Vyāsa, <i>Bhāṣya</i> on YS I.5–11; Vācaspati Miśra, <i>Tattvavaiśāradī</i> on the same sūtras. The most rigorous analysis in the secondary literature is in Karl Potter, ed., <i>Encyclopedia of Indian Philosophies, Vol. III: Advaita Vedānta up to Śaṃkara and His Pupils</i> (Princeton: Princeton University Press, 1981), and its companion volumes on Sāṃkhya-Yoga.</li>
+      <li><sup>5</sup> On the aṣṭāṅga system and the outer-to-inner progressive logic: Patañjali, <i>Yogasūtra</i> II.29–III.3; Vyāsa's Bhāṣya on these sūtras; and Georg Feuerstein, <i>The Yoga-Sūtra of Patañjali: A New Translation and Commentary</i> (Rochester: Inner Traditions, 1989), Chapters 5–6.</li>
+      <li><sup>6</sup> On the samāpatti-states and their phenomenological characterisation: Patañjali, <i>Yogasūtra</i> I.41–51; Vyāsa's Bhāṣya; Vācaspati Miśra's Tattvavaiśāradī; and the extended treatment in Bryant, <i>Yoga Sūtras</i>, pp. 106–148.</li>
+      <li><sup>7</sup> On the bridge between bhāvanā and dhāraṇā: the structural parallel is developed in this paper's own analysis rather than in the secondary literature, which has not, to the author's knowledge, systematically developed the connection. The comparison with Stanislavski's "emotional memory" technique (An Actor Prepares, 1936) is a point of contact with Western performance theory that this paper declines to develop at length but acknowledges as a significant convergence.</li>
+      <li><sup>8</sup> On the Yoga-śāstric account of saṃskāra, vāsanā, and their dissolution: Patañjali, <i>Yogasūtra</i> IV.9–11; Vācaspati Miśra's Tattvavaiśāradī on these sūtras; and the excellent discussion in Larson and Bhattacharya, <i>Yoga</i>, Chapter 4.</li>
+      <li><sup>9</sup> On Abhinavagupta and the Kashmir Śaiva account of cit as shared consciousness: Abhinavagupta, <i>Tantrāloka</i> I, trans. and comm. Alexis Sanderson; and David Lawrence, <i>Rediscovering God with Transcendental Argument</i> (Albany: SUNY Press, 1999), Chapter 3 on Abhinavagupta's ontology of consciousness.</li>
+      <li><sup>10</sup> On the modern interpretive tradition's departures from classical Yoga-śāstra: David Gordon White, <i>The Yoga Sutra of Patanjali: A Biography</i> (Princeton: Princeton University Press, 2014) — an invaluable critical history of the text's reception and reinterpretation.</li>
+    </ol>
+  </section>
+
+  <div class="divider-orn">★</div>
+
+  <section id="bibliography">
+    <h2 class="sectiontitle" style="font-size:22px;">Bibliography</h2>
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;">Primary Sources</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Patañjali. <i>Yogasūtra.</i> Trans. and comm. Edwin F. Bryant. New York: North Point Press, 2009.<br>
+    Patañjali. <i>Yogasūtra.</i> Trans. Georg Feuerstein. Rochester: Inner Traditions, 1989.<br>
+    Vyāsa. <i>Bhāṣya on the Yogasūtra.</i> Included in Bryant (above) and in: Rāma Prasāda, trans. <i>Patañjali's Yoga Sūtras with the Commentary of Vyāsa.</i> New Delhi: Munshiram Manoharlal, 1988.<br>
+    Vācaspati Miśra. <i>Tattvavaiśāradī.</i> Partial trans. in James Haughton Woods, <i>The Yoga-System of Patañjali.</i> Cambridge: Harvard University Press, 1914. Repr. Delhi: Motilal Banarsidass, 2007.
+    </p>
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Secondary Sources</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Larson, Gerald James, and Ram Shankar Bhattacharya, eds. <i>Yoga: India's Philosophy of Meditation.</i> Delhi: Motilal Banarsidass, 2008.<br>
+    Feuerstein, Georg. <i>The Yoga Tradition.</i> Prescott: Hohm Press, 1998.<br>
+    Whicher, Ian. <i>The Integrity of the Yoga Darśana.</i> Albany: SUNY Press, 1998.<br>
+    Jacobsen, Knut Axel. <i>Prakṛti in Sāṃkhya-Yoga.</i> New York: Peter Lang, 1999.<br>
+    White, David Gordon. <i>The Yoga Sutra of Patanjali: A Biography.</i> Princeton: Princeton University Press, 2014.<br>
+    Iyengar, B.K.S. <i>Light on the Yoga Sutras of Patanjali.</i> London: HarperCollins, 1993.
+    </p>
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Predecessor Papers in Series B</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Cultural Musings. <i>Series B, Parts I–V.</i> As cited in Part Five's bibliography.
+    </p>
+  </section>
+
+  <div class="divider-orn">☆</div>
+
+  <section id="glossary">
+    <h2 class="sectiontitle" style="font-size:22px;">Glossary</h2>
+    <dl class="glossary">
+      <dt><span class="glossterm">चित्त</span> citta</dt>
+      <dd>The compound mental instrument comprising buddhi (discriminative intelligence), ahaṃkāra (the appropriating ego-sense), and manas (the sense-collating faculty). The locus of all vṛtti-activity; the instrument whose progressive formation toward samādhi-capacity is the Yoga-śāstric discipline's subject-matter.</dd>
+      <dt><span class="glossterm">वृत्ति</span> vṛtti</dt>
+      <dd>Modification, fluctuation, or turning of the citta; any actuation of the citta's potential into a specific cognitive act. Five categories are identified: pramāṇa, viparyaya, vikalpa, nidrā, smṛti. Yoga is defined as their restraint (nirodha).</dd>
+      <dt><span class="glossterm">निरोध</span> nirodha</dt>
+      <dd>Restraint, cessation, channelling; the progressive discipline of the citta's habitual vṛtti-patterns toward the concentrated, continuous, transparent attentional mode of samādhi. The culminating achievement of the inner triad.</dd>
+      <dt><span class="glossterm">क्लेश</span> kleśa</dt>
+      <dd>Affliction, structural distorting condition; five in number (avidyā, asmitā, rāga, dveṣa, abhiniveśa). The structural sources of the citta's kleśa-laden vṛtti-production; progressively attenuated by the aṣṭāṅga programme's successive limbs.</dd>
+      <dt><span class="glossterm">समापत्ति</span> samāpatti</dt>
+      <dd>The citta's "falling completely into" its object during samādhi; the progressive series of absorbed attentional states (savitarka, nirvitarka, savicāra, nirvicāra, sānanda, sāsmitā, asamprajñāta) that constitute the phenomenological ladder from object-supported to objectless absorption.</dd>
+      <dt><span class="glossterm">संयम</span> saṃyama</dt>
+      <dd>The simultaneous unified application of dhāraṇā, dhyāna, and samādhi to a single object; the operative concept governing the inner triad's practical application. Applied to appropriate objects, saṃyama produces the vibhūtis — extraordinary cognitive capacities — whose significance as diagnostic indicators of attentional depth is treated in Section V.</dd>
+      <dt><span class="glossterm">पुरुष</span> puruṣa</dt>
+      <dd>Pure, unchanging, witnessing consciousness; the undivided experiential ground whose recovery — through the citta's progressive purification toward viveka-khyāti — is the Yoga-śāstric practice's ultimate telos. In the monistic (Kashmir Śaiva) reading deployed in Section IX, puruṣa-equivalent cit provides the shared ontological ground of collective rasāsvādana.</dd>
+      <dt><span class="glossterm">विवेकख्याति</span> viveka-khyāti</dt>
+      <dd>Discriminative insight; the direct, non-discursive cognitive apprehension of the puruṣa-prakṛti distinction by a citta sufficiently refined to make that apprehension possible. The direct antechamber of kaivalya; the non-discursive achievement whose relationship to discursive śāstric knowledge is Part Seven's central subject.</dd>
+      <dt><span class="glossterm">वासना</span> vāsanā</dt>
+      <dd>The generic, species-wide affective dispositions (toward pleasure and pain, self-preservation, sensory engagement) constituting the deepest layer of saṃskāra-residue, distinguished by Vācaspati Miśra from individual saṃskāras as the substrate on which individual saṃskāra-formation occurs. Dissolved in nirbīja samādhi.</dd>
+    </dl>
+  </section>
+
+  <div class="divider-orn">↗</div>
+
+  <section class="preview-box">
+    <h3>Series B: Complete Part Map (Reference)</h3>
+    <table class="partmap">
+      <tr><th>Part</th><th>Title</th><th>Psychological Stage</th></tr>
+      <tr><td>I</td><td>Vāk as the Ground of Psychological Awareness</td><td>Pre-differentiated awareness</td></tr>
+      <tr><td>II</td><td>Śabda-Bheda: The Birth of Discrimination</td><td>Differentiation / discernment</td></tr>
+      <tr><td>III</td><td>Sāma Veda and the Birth of Affect</td><td>Feeling-toned cognition</td></tr>
+      <tr><td>IV</td><td>Nāṭyaśāstra I: Rasa and the Architecture of Emotion</td><td>Aesthetic embodiment</td></tr>
+      <tr><td>V</td><td>Nāṭyaśāstra II: Abhinaya and Embodied Expression</td><td>Somatic cognition</td></tr>
+      <tr><td class="this-paper">VI</td><td class="this-paper">Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</td><td class="this-paper">This Paper · Self-regulation / will</td></tr>
+      <tr><td>VII</td><td>Proliferation of Śāstra I: Vyākaraṇa, Nyāya</td><td>Specialised cognition</td></tr>
+      <tr><td>VIII</td><td>Proliferation of Śāstra II: Arthaśāstra, Āyurveda</td><td>Social/embodied extension</td></tr>
+      <tr><td>IX</td><td>Mantra-Śāstra: Vāk Returning as Sound-Technology</td><td>Recursive self-application</td></tr>
+      <tr><td>X</td><td>Case Studies in Śabda-to-Śāstra Transmission</td><td>Applied/historical synthesis</td></tr>
+      <tr><td>XI</td><td>Dharma and Adharma: The Convergent Psychology of Order</td><td>Ethical-metaphysical synthesis</td></tr>
+      <tr><td>XII</td><td>Pratiprasava: Vāk's Return and the Handoff Beyond</td><td>Closing return</td></tr>
+    </table>
+  </section>
+
+</main>
+
+<footer class="papertail">
+  <div class="om">ॐ तत् सत्</div>
+  <div class="omtatsat">om tat sat — That is Truth</div>
+  <div class="stamp">
+    <b>Series B · Part Six</b> · Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention<br>
+    Cultural Musings · Vedic &amp; Śāstric Research Platform<br>
+    Predecessor: Series B · Part Five · Nāṭyaśāstra II: Abhinaya<br>
+    Successor: Series B · Part Seven · Proliferation I: Vyākaraṇa, Nyāya
+  </div>
+</footer>
+
+</body>
+</html>
